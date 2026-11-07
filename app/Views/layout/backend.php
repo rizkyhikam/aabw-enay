@@ -50,19 +50,19 @@
                             </div>
                             <div class="search-item">
                                 <a href="#">
-                                    <img class="mr-3 rounded" width="30" src="<?= base_url() ?>/template//assets/img/products/product-3-50.png" alt="product">
+                                    <img class="mr-3 rounded" width="30" src="<?= base_url() ?>/template/assets/img/products/product-3-50.png" alt="product">
                                     oPhone S9 Limited Edition
                                 </a>
                             </div>
                             <div class="search-item">
                                 <a href="#">
-                                    <img class="mr-3 rounded" width="30" src="<?= base_url() ?>/template//assets/img/products/product-2-50.png" alt="product">
+                                    <img class="mr-3 rounded" width="30" src="<?= base_url() ?>/template/assets/img/products/product-2-50.png" alt="product">
                                     Drone X2 New Gen-7
                                 </a>
                             </div>
                             <div class="search-item">
                                 <a href="#">
-                                    <img class="mr-3 rounded" width="30" src="<?= base_url() ?>/template//assets/img/products/product-1-50.png" alt="product">
+                                    <img class="mr-3 rounded" width="30" src="<?= base_url() ?>/template/assets/img/products/product-1-50.png" alt="product">
                                     Headphone Blitz
                                 </a>
                             </div>
@@ -131,7 +131,7 @@
                                 </a>
                                 <a href="#" class="dropdown-item">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" src="<?= base_url() ?>/template//assets/img/avatar/avatar-4.png" class="rounded-circle">
+                                        <img alt="image" src="<?= base_url() ?>/template/assets/img/avatar/avatar-4.png" class="rounded-circle">
                                     </div>
                                     <div class="dropdown-item-desc">
                                         <b>Ardian Rahardiansyah</b>
@@ -141,7 +141,7 @@
                                 </a>
                                 <a href="#" class="dropdown-item">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" src="<?= base_url() ?>/template//assets/img/avatar/avatar-5.png" class="rounded-circle">
+                                        <img alt="image" src="<?= base_url() ?>/template/assets/img/avatar/avatar-5.png" class="rounded-circle">
                                     </div>
                                     <div class="dropdown-item-desc">
                                         <b>Alfa Zulkarnain</b>
@@ -252,7 +252,7 @@
                     </ul>
 
                     <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-                        <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                        <a href="https:/getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
                             <i class="fas fa-rocket"></i> SIA AKN SV-IPB
                         </a>
                     </div>
@@ -260,12 +260,12 @@
             </div>
 
             <!-- Main Content -->
-            <div class="main-content">
+            <div class="main-content" style="padding-top: 80px;">
                 <?= $this->renderSection("content") ?>
             </div>
             <footer class="main-footer">
                 <div class="footer-left">
-                    Copyright &copy; 2026 <div class="bullet"></div> Design By <a href="https://nauval.in/">Ginar Nurasih Afrida</a>
+                    Copyright &copy; 2026 <div class="bullet"></div> Design By <a href="https:/nauval.in/">Ginar Nurasih Afrida</a>
                 </div>
                 <div class="footer-right">
                     2.3.0
