@@ -1,6 +1,10 @@
 <?= $this->extend('layout/backend') ?>
 
 <?= $this->section('content') ?>
+<title>SIA-IPB &mdash; Akun1</title>
+<?= $this->endSection() ?>
+
+<?= $this->section('content') ?>
 <section class="section">
     <div class="section-header">
         <!-- <h1>Blank Page</h1> -->
@@ -33,7 +37,7 @@
             </div>
             <div class="card-body p-4">
                 <div class="table-responsive">
-                    <table class="table table-striped table-md">
+                    <table class="table table-striped table-md" id="myTable">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -50,7 +54,12 @@
                                 <td><?=$value->nama_akun1 ?></td>
                                 <td class="text-center" style="width:20%">
                                     <a href="<?=site_url('akun1/edit/'.$value->id_akun1) ?>" class="btn btn-warning"><i class="fas fa-pencil-alt btn-small"></i>Edit</a>
-                                    <a href="" class="btn btn-danger"><i class="fas fa-trash-alt btn-small"></i>Del</a>
+                                    <form action="<?=site_url('akun1/'.$value->id_akun1) ?>" method="post" id="del-<?=$value->id_akun1?>" class="d-inline">
+                                    <?=csrf_field(); ?>
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button class="btn btn-danger btn-small" data-confirm="Hapus Data....? | Apakah Anda Yakin.....?" data-confirm-yes="hapus(<?=$value->id_akun1 ?>)"><i class="fas fa-trash"></i></button>
+
+                                    </form>
                                 </td>
                             </tr>
 

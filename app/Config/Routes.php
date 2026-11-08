@@ -10,3 +10,4 @@ $routes->post('akun1', 'Akun1::store');
 
 $routes->get('akun1/edit/(:num)', 'Akun1::edit/$1');
 $routes->post('akun1/edit/(:num)', 'Akun1::update/$1');
+$routes->delete('/akun1/(:any)', 'Akun1::destroy/$1');
