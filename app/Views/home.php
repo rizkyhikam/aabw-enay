@@ -9,6 +9,8 @@
 
     <div class="section-body">
         <!-- dinamis -->
+         <h2>Sistem Informasi Akuntansi - AKN</h2>
+         <h5>Sekolah Vokasi IPB</h5>
     </div>
 </section>
 
