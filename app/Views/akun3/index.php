@@ -1,6 +1,6 @@
 <?= $this->extend('layout/backend') ?>
 
-<?= $this->section('content') ?>
+<?= $this->section('title') ?>
 <title>SIA-IPB &mdash; Akun3</title>
 <?= $this->endSection() ?>
 
@@ -8,10 +8,10 @@
 <section class="section">
     <div class="section-header">
         <!-- <h1>Blank Page</h1> -->
-        <a href="<?=site_url('akun3/new')?>" class="btn btn-primary"> Add New</a>
+        <a href="<?= site_url('akun3/new') ?>" class="btn btn-primary"> Add New</a>
     </div>
 
-    <!-- ini untuk menangkap session succes dengan bawaan with --> 
+    <!-- ini untuk menangkap session succes dengan bawaan with -->
     <?php if (session()->getFlashdata('success')): ?>
         <div class="alert alert-success alert-dismissible show fade">
             <div class="alert-body">
@@ -21,7 +21,7 @@
         </div>
     <?php endif; ?>
 
-    <?php if (session()->getFlashdata('error')) :?>
+    <?php if (session()->getFlashdata('error')) : ?>
         <div class="alert alert-danger alert-dismissible show fade">
             <div class="alert-body">
                 <button class="close" data-dismiss="alert"> X </button>
@@ -50,21 +50,21 @@
                         </thead>
                         <tbody>
                             <?php foreach ($dtakun3 as $key => $value): ?>
-                            <tr>
-                                <td><?=$key + 1 ?></td>
-                                <td><?=$value->nama_akun1 ?></td>
-                                <td><?=$value->nama_akun2 ?></td>
-                                <td><?=$value->kode_akun3 ?></td>
-                                <td><?=$value->nama_akun3 ?></td>
-                                <td class="text-center" style="width:20%">
-                                    <a href="<?=site_url('akun3/'.$value->id_akun3) .'/edit' ?>" class="btn btn-warning"><i class="fas fa-pencil-alt btn-small"></i>Edit</a>
-                                    <form action="<?=site_url('akun3/'.$value->id_akun3) ?>" method="post" id="del-<?=$value->id_akun3?>" class="d-inline">
-                                    <?=csrf_field(); ?>
-                                        <input type="hidden" name="_method" value="DELETE">
-                                        <button class="btn btn-danger btn-small" data-confirm="Hapus Data....? | Apakah Anda Yakin.....?" data-confirm-yes="hapus(<?=$value->id_akun3 ?>)"><i class="fas fa-trash"></i></button>
-                                    </form>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td><?= $key + 1 ?></td>
+                                    <td><?= $value->nama_akun1 ?></td>
+                                    <td><?= $value->nama_akun2 ?></td>
+                                    <td><?= $value->kode_akun3 ?></td>
+                                    <td><?= $value->nama_akun3 ?></td>
+                                    <td class="text-center" style="width:20%">
+                                        <a href="<?= site_url('akun3/' . $value->id_akun3) . '/edit' ?>" class="btn btn-warning"><i class="fas fa-pencil-alt btn-small"></i>Edit</a>
+                                        <form action="<?= site_url('akun3/' . $value->id_akun3) ?>" method="post" id="del-<?= $value->id_akun3 ?>" class="d-inline">
+                                            <?= csrf_field(); ?>
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <button class="btn btn-danger btn-small" data-confirm="Hapus Data....? | Apakah Anda Yakin.....?" data-confirm-yes="hapus(<?= $value->id_akun3 ?>)"><i class="fas fa-trash"></i></button>
+                                        </form>
+                                    </td>
+                                </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
@@ -74,4 +74,3 @@
     </div>
 </section>
 <?= $this->endSection() ?>
-
