@@ -43,7 +43,7 @@ class JurnalUmum extends BaseController
         return view('jurnalumum/index', $data);
     }
 
-    public function cetakPDF()
+    public function cetakjudulpdf()
     {
         $tglawal = $this->request->getVar('tglawal') ? $this->request->getVar('tglawal') : '';
         $tglakhir = $this->request->getVar('tglakhir') ? $this->request->getVar('tglakhir') : '';
@@ -67,14 +67,14 @@ class JurnalUmum extends BaseController
             'tglakhir' => $tglakhir,
         ];
 
-        $html = view('jurnalumum/cetakjudul', $data);
+        $html = view('jurnalumum/cetakjudulpdf', $data);
         // create new PDF document
         $pdf = new TCPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
         // remove default header/footer
         $pdf->setPrintHeader(false);
         $pdf->setPrintFooter(false);
         // set margins
-        $pdf->SetMargins(20, 3, 3);
+        $pdf->SetMargins(30, 4, 3);
 
         // set font
         $pdf->SetFont('helvetica', '', 8);

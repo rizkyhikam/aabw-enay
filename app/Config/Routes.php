@@ -35,7 +35,19 @@ $routes->get('/penyesuaian/(:any)', 'Penyesuaian::show/$1');
 
 $routes->get('/jurnalumum', 'JurnalUmum::index');
 $routes->post('/jurnalumum', 'JurnalUmum::index');
-$routes->post('/jurnalumum/cetakpdf', 'JurnalUmum::cetakPDF');
+$routes->post('/jurnalumum/cetakjudulpdf', 'JurnalUmum::cetakjudulpdf');
+
+$routes->get('/jurnalpenyesuaian', 'JurnalPenyesuaian::index');
+$routes->post('/jurnalpenyesuaian', 'JurnalPenyesuaian::index');
+$routes->post('/jurnalpenyesuaian/cetakjudulpdf', 'JurnalPenyesuaian::cetakjudulpdf');
+
+$routes->get('/neracasaldo', 'NeracaSaldo::index');
+$routes->post('/neracasaldo', 'NeracaSaldo::index');
+$routes->post('/neracasaldo/neracasalodpdf', 'NeracaSaldo::neracasalodpdf');
+
+$routes->get('/neracalajur', 'NeracaLajur::index');
+$routes->post('/neracalajur', 'NeracaLajur::index');
+$routes->post('/neracalajur/neracalajurpdf', 'NeracaLajur::neracalajurpdf');
 
 $routes->get('/posting', 'Posting::index');
 $routes->post('/posting', 'Posting::index');

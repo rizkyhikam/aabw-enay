@@ -24,7 +24,7 @@
 
                     <div class="col">
                         <button type="submit" class="btn btn-primary"><i class="fas fa-list"></i> Tampilkan</button>
-                        <input type="submit" class="btn btn-success" formtarget="_blank" formaction="<?= site_url('jurnalumum/cetakpdf') ?>" value="Cetak PDF">
+                        <input type="submit" class="btn btn-success" formtarget="_blank" formaction="<?= site_url('jurnalumum/cetakjudulpdf') ?>" value="Cetak PDF">
                     </div>
                 </div>
             </form>
